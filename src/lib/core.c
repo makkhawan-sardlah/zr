@@ -54,3 +54,13 @@ int zr_free_zero_count(zr_zero_count_t *__restrict__ __zero_count) {
     zr_free_zero(__zero_count->__init);
     free(__zero_count);
 }
+
+int zr_printf_zero(zr_zero_t *__restrict__ __zero) {
+    zr_zero_t *__zero_n = __zero;
+    for (size_t i = 0; i < 256; i++)
+    {
+        printf("========== index: %lu ==========\ndata: %c\nfreq: %lu\n",i,__zero_n->__data,__zero_n->__freq);
+        __zero_n = __zero_n->__next;
+    }
+}
+
