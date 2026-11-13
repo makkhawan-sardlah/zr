@@ -3,6 +3,8 @@
 
 #define ZERO_VERSION 1
 
+#define ZERO_SIZE_BUFFER 65536
+
 #include <stdlib.h>
 
 typedef struct
@@ -17,7 +19,7 @@ typedef struct
 typedef struct zr_zero_t
 {
     unsigned char __data;
-    long unsigned int __freq;
+    unsigned long int __freq;
     struct zr_zero_t *__next;
 }zr_zero_t;
 
